@@ -7,7 +7,7 @@ const Projects = ({ mobile = false }) => {
     return (
         <CardGroup centered itemsPerRow={2} style={{margin:'.5em'}}>
             {projectData.map((card, index) => {
-                return <ProjectCard header={card.header} meta={card.meta} description={card.description} logo={card.logo} />
+                return <ProjectCard key={index} header={card.header} meta={card.meta} description={card.description} logo={card.logo} />
             })}
         </CardGroup>
     )
