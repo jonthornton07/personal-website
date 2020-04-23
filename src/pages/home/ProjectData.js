@@ -1,6 +1,6 @@
 const alohaUI = {
     header: 'Point of Sale',
-    meta: 'Archtiect: React Native',
+    meta: 'Architect: React Native',
     description: 'Mobile application designed to work as an in store point of sale.',
     logo: 'ncr.png'
 }

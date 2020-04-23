@@ -1,5 +1,5 @@
 import React from 'react'
-import { Segment, Card } from 'semantic-ui-react'
+import { Segment, Header } from 'semantic-ui-react'
 
 const aboutText = 
 'I am currently a mobile developer for Cox Media Group. I have been doing native mobile development for about 5 years now. That includes Android and iOS, but my focus the last year or so has been in iOS. I enjoy doing both Android and iOS development and try to keep up with both.'+
@@ -8,12 +8,8 @@ const aboutText =
 const About = () => {
     return (
         <Segment basic style={{margin: '.5em'}}>
-            <Card fluid >
-                <Card.Content>
-                    <Card.Header>About</Card.Header>
-                    <Card.Content description={aboutText} />
-                </Card.Content>
-            </Card>
+            <Header size='medium'>About</Header>
+            <p>{aboutText}</p>
         </Segment>
     )
 }

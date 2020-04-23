@@ -24,7 +24,7 @@ const HomeHeader = ({ mobile }) => {
             </Container>
             Jon Thornton
             <Header.Subheader>
-                Software Engineer | Leader | Family Man
+                Software Engineer | Leader | Father
             </Header.Subheader>
         </Header>
     </Container>
