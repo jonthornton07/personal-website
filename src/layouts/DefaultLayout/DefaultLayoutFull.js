@@ -1,12 +1,8 @@
 import React from "react";
-import BannerHeader from "../components/header/BannerHeader";
+import BannerHeader from "../../components/header/BannerHeader";
 import { Responsive, Segment } from "semantic-ui-react";
-import AppHeader from "../components/header/AppHeader";
-
-const getWidth = () => {
-  const isSSR = typeof window === "undefined";
-  return isSSR ? Responsive.onlyTablet.minWidth : window.innerWidth;
-};
+import AppHeader from "../../components/header/AppHeader";
+import { getWidth } from "../LayoutUtils";
 
 export const HeaderTypes = {
   Banner: "banner",
@@ -14,10 +10,10 @@ export const HeaderTypes = {
   None: "none",
 };
 
-const DefaultLayout = ({
+const DefaultLayoutFull = ({
   activePage,
-  headerType = "Regular",
-  headerChildren = null,
+  headerType,
+  headerChildren,
   children,
 }) => {
   const useBannerHeader = headerType === HeaderTypes.Banner;
@@ -38,4 +34,4 @@ const DefaultLayout = ({
   );
 };
 
-export default DefaultLayout;
+export default DefaultLayoutFull;

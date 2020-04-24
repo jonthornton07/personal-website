@@ -12,7 +12,7 @@ const ProfileSection = ({
     <Segment basic compact>
       <Header size="medium">
         {title}
-        <Header.Subheader sub size="small">
+        <Header.Subheader size="small">
           {company} / {timeFrame}
         </Header.Subheader>
       </Header>
