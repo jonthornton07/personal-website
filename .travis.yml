@@ -3,3 +3,9 @@ node_js: node
 cache: yarn
 script:
   - yarn test
+  - yarn build
+deploy:
+  provider: heroku
+  app: $HEROKU_APP
+  api_key:
+    secure: $HEROKU_API_KEY
