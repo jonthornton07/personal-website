@@ -2,10 +2,10 @@ language: node_js
 node_js: node
 cache: yarn
 script:
-  - yarn test
-  - yarn build
+- yarn test
+- yarn build
 deploy:
   provider: heroku
-  app: $HEROKU_APP
+  app: "$HEROKU_APP"
   api_key:
-    secure: $HEROKU_API_KEY
+    secure: hc8yDXl0satBKWFZI1wbhJy+XPZ5BHnEr7uINwRhPIBCnO+F+npSb0Ze83JGV0tickoBqm6d3+ymtU/mNO5Fm3uvYH5d0Dy4OYY5nkTDQi6rGYrIPG4o85GSIyqZLoHUgZX3FyPVVVAQ6yUszOYXQYWV913V6fvEZw/BhsKUrLJXzTr9OlCX9FmBtks334NqDvzsOjZWz1IFxw3tGIbnZ1kAWcecAVHKgMG3OasrKFcQ90FCq4tux8zseq43vgXtu4XKCrhvZWha6fM+Q3/OGi/Oo0ve8mjkTdI2UJO21TCz69Kl6v+WHYA+EV+LGCHjwy1baVJbh2CXmDznNFzTL2SvY2CYK50TwFIwtJmlljuQEOTNA+FFI5s9tVtWSv2fx7kx1KL9wVeAXluKKpNpmlBtQk60hqY/tMXPHtCJFDBl2rf4m2dVkvZl/zDmIDtZQUwA3aGDzTjoNN+wXhR9dIZItlTU62XU8txp+FUiPiYCwkPHg7a15aZ9EXcZc/8stPLx2MM774fV3vw6ge/SwFCyEDxlQQ7JAKv6YCdvxaphkhsU9uPGkAewP87AwVa4TaEc1i1jg+TF5OT5hRDEZkDHkzNWt3n0c8o07Fae0GALt/YOmgXqYEbNpud/EwURwW2+7qFAVWgGBKRri9oyUlCHeE735Y8VHWaN/Y6dcW4=
