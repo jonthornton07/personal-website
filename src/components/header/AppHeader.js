@@ -22,9 +22,6 @@ const AppHeader = ({ activePage, isFixed = false }) => {
         <Menu.Item as={Link} to="/" active={activePage === "Home"}>
           Home
         </Menu.Item>
-        <Menu.Item as={Link} to="/blog" active={activePage === "Blog"}>
-          Blog
-        </Menu.Item>
         <Menu.Item as={Link} to="/profile" active={activePage === "Resume"}>
           Resume
         </Menu.Item>
