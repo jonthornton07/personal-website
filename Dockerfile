@@ -1,10 +1,15 @@
-FROM node:alpine as builder
+FROM node:alpine as react-build
 WORKDIR './app'
 COPY package.json .
 RUN npm install
 COPY . .
 RUN yarn build
 
-FROM nginx
-EXPOSE 80
-COPY --from=builder /app/build /usr/share/nginx/html
+FROM nginx:alpine
+COPY nginx.conf /etc/nginx/conf.d/configfile.template
+ENV PORT 8080
+ENV HOST 0.0.0.0
+RUN sh -c "envsubst '\$PORT'  < /etc/nginx/conf.d/configfile.template > /etc/nginx/conf.d/default.conf"
+COPY --from=react-build /app/build /usr/share/nginx/html
+EXPOSE 8080
+CMD ["nginx", "-g", "daemon off;"]

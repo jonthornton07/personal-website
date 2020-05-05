@@ -1,16 +1,18 @@
-language: node_js
-node_js: node
-cache: yarn
+sudo: required
+services:
+  - docker
+before_install:
+  - openssl aes-256-cbc -K $encrypted_a6116f5786ba_key -iv $encrypted_a6116f5786ba_iv
+    -in creds.json.enc -out creds.json
+    -d
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker build -t jonthornton07/personal-website -f ./Dockerfile.dev .
 script:
-  - yarn test
-  - yarn build
+  - docker run -e CI=true jonthornton07/personal-website yarn test
+after_success:
+  - docker build -t jonthornton07/personal-website .
 deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN
-  keep_history: true
-  local_dir: build
-  script:
-    - yarn deploy
-  on:
-    branch: master
+  on: master
+  provider: gae
+  project: $GCP_PROJECT_ID
+  keyfile: creds.json
