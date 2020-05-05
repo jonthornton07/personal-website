@@ -16,3 +16,6 @@ deploy:
   provider: gae
   project: $GCP_PROJECT_ID
   keyfile: creds.json
+  bucket: $GCP_BUCKET
+  skip_cleanup: true
+  local-dir: build
