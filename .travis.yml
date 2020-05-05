@@ -5,14 +5,14 @@ before_install:
   - openssl aes-256-cbc -K $encrypted_a6116f5786ba_key -iv $encrypted_a6116f5786ba_iv
     -in creds.json.enc -out creds.json
     -d
-  - docker build -t jonthornton07/personal-website -f ./Dockerfile.dev .
+  - yarn install
 script:
-  - docker run -e CI=true jonthornton07/personal-website yarn test
-after_success:
+  - yarn test
   - yarn build
 deploy:
   on: master
   provider: gcs
+  project: $GCP_PRO
   access_key_id: $GCP_ACCESS_KEY_ID
   secret_access_key: $GCP_SECRET_KEY
   bucket: $GCP_BUCKET
