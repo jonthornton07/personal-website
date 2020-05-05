@@ -14,4 +14,3 @@ deploy:
   secret_access_key: $GCP_SECRET_KEY
   bucket: $GCP_BUCKET
   skip_cleanup: true
-  local-dir: build
