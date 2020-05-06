@@ -1,16 +1,27 @@
 sudo: required
+services:
+  - docker
+env:
+  global:
+    - SHA=$(git rev-parse HEAD)
+    - CLOUDSDK_CORE_DISABLE_PROMPTS=1
 before_install:
   - openssl aes-256-cbc -K $encrypted_a6116f5786ba_key -iv $encrypted_a6116f5786ba_iv
-    -in creds.json.enc -out creds.json
+    -in service-account.json.enc -out service-account.json
     -d
-  - yarn install
+  - curl https://sdk.cloud.google.com | bash > /dev/null;
+  - source $HOME/google-cloud-sdk/path.bash.inc
+  - gcloud components update kubectl
+  - gcloud auth activate-service-account --key-file service-account.json
+  - gcloud config set project $GCP_PROJECT_ID
+  - gcloud config set compute/zone us-east1-b
+  - gcloud container clusters get-credentials website
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker build -t jonthornton07/personal-website -f ./Dockerfile.dev .
 script:
-  - yarn test
-  - yarn build
+  - docker run -e CI=true jonthornton07/personal-website yarn test
 deploy:
-  on: master
-  provider: gcs
-  access_key_id: $GCP_ACCESS_KEY_ID
-  secret_access_key: $GCP_SECRET_KEY
-  bucket: $GCP_BUCKET
-  skip_cleanup: true
+  provider: script
+  script: bash ./deploy.sh
+  on:
+    branch: master
