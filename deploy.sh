@@ -9,4 +9,4 @@ docker push jonthornton07/personal-website:$SHA
 kubectl apply -f k8s
 
 # Set latest images
-kubectl set image deployments/web-deployment client=jonthornton07/personal_website:$SHA
+kubectl set image deployments/web-deployment client=jonthornton07/personal-website:$SHA
