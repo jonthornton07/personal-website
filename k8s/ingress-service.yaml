@@ -8,7 +8,6 @@ spec:
   rules:
     - http:
         paths:
-          - path: /*
-            backend:
-              serviceName: web-service
-              servicePort: 3000
+          backend:
+            serviceName: web-service
+            servicePort: web-ports
