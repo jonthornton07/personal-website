@@ -1,10 +1,7 @@
 import React from 'react'
-import {Container, Header, Image, Segment,} from 'semantic-ui-react'
+import {Container, Header, Image} from 'semantic-ui-react'
 
 const HomeHeader = ({mobile}) => {
-
-    const logoImage = require("../../assets/lifebell.jpg");
-
     return (
         <Container text>
             <Header

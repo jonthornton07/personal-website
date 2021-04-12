@@ -1,10 +1,9 @@
 import React from "react";
-import {Card, Container, Divider, Header, Image, List, Segment} from "semantic-ui-react";
+import {Divider, Header, Image, List, Segment} from "semantic-ui-react";
 
 const ProfileSection = ({
     timeFrame,
     company,
-    location,
     title,
     highlights,
     logo

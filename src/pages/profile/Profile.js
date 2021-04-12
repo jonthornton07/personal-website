@@ -14,7 +14,6 @@ const Profile = () => {
                             key={index}
                             timeFrame={section.timeframe}
                             company={section.companyName}
-                            location={section.location}
                             title={section.title}
                             logo={section.logo}
                             highlights={section.highlights}
