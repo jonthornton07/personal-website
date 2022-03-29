@@ -1,3 +1,0 @@
-sudo: required
-script:
-  - docker run -e CI=true jonthornton07/personal-website yarn test
