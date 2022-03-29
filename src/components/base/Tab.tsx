@@ -1,5 +1,6 @@
 import React from "react"
 import styled from 'styled-components'
+import { Pages } from "../../pages/pages"
 
 interface AnchorProps {
     active: boolean
@@ -15,16 +16,17 @@ const Anchor = styled.a<AnchorProps>`
     padding-left: 20px;
     padding-right: 20px;    
     border-bottom: ${props => props.active ? "3px solid white" : "none"};
+    text-decoration: none;
 `
 
 interface Props {
-    text: string
+    page: Pages
     active: boolean
 }
 
-const Tab: React.FC<Props> = ({active, text}) => {
+const Tab: React.FC<Props> = ({active, page}) => {
     return (
-        <Anchor active={active}>{text}</Anchor>
+        <Anchor active={active} href={`/${page}`.toLocaleLowerCase()}>{`${page}`.toUpperCase()}</Anchor>
     )
 }
 

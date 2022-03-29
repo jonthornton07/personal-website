@@ -1,7 +1,7 @@
 export enum Pages {
     Home = "Home",
     Blogs = "Blogs",
-    Resume = "Resume",
+    Work = "Work",
 }
 
-export const activePages = [Pages.Home, Pages.Resume, Pages.Blogs]
+export const activePages = [Pages.Home, Pages.Work, Pages.Blogs]

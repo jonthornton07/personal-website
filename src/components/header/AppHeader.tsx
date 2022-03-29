@@ -10,22 +10,6 @@ interface Props {
     isFixed?: boolean
 }
 
-const navAnchorStyle = (isActive: boolean): React.CSSProperties => {
-    let styles: React.CSSProperties = {
-        padding: '.75em',
-        color: 'white',
-        textDecorationLine: 'none',
-    }
-    if (isActive) {
-        styles =  {
-            ...styles,
-            
-            borderBottom: '2px solid white',
-        }
-    }
-    return styles
-}
-
 const Container = styled.div`
     width: 100%;
     height: 100%;
@@ -43,7 +27,10 @@ const AppHeader: React.FC<Props> = ({activePage, isFixed = false}) => {
                 <TabWrapper>
                     {activePages.map(page => {
                         return(
-                            <Tab key={page} active={activePage === page} text={page} />
+                            <Tab 
+                                key={page} 
+                                active={activePage === page} 
+                                page={page} />
                         )
                     })}
                 </TabWrapper>

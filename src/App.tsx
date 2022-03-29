@@ -4,6 +4,7 @@ import Home from "./pages/home/Home";
 import Profile from "./pages/profile/Profile";
 import Blog from "./pages/blog/Blog";
 import {startFirebase} from "./firebase/LocalFirebase"
+import { Pages } from "./pages/pages";
 
 const App = () => {
 
@@ -14,8 +15,9 @@ const App = () => {
     return (
         <Routes>
             <Route path="/" element={<Home />}/>
-            <Route path="/profile" element={<Profile />}/>
-            <Route path="/blog" element={<Blog />}/>
+            <Route path={`${Pages.Home}`.toLowerCase()} element={<Home />}/>
+            <Route path={`${Pages.Work}`.toLowerCase()} element={<Profile />}/>
+            <Route path={`${Pages.Blogs}`.toLowerCase()} element={<Blog />}/>
         </Routes>
     )
 }

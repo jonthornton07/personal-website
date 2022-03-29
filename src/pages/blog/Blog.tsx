@@ -6,9 +6,20 @@ import BlogGrid from "./BlogGrid";
 
 const Blog = () => {
     return (
-        <DefaultLayout activePage={Pages.Blogs} headerType={HeaderTypes.Regular}>
-            <BlogGrid/>
+        <DefaultLayout
+            activePage={Pages.Blogs}
+            headerType={HeaderTypes.Banner}
+            headerChildren={<></>}
+        >
+            <>
+            </>
+            {/* <About/> */}
+            {/* <Divider horizontal>Projects</Divider>
+            <Projects/> */}
         </DefaultLayout>
+        // <DefaultLayout activePage={Pages.Blogs} headerType={HeaderTypes.Regular}>
+        //     <BlogGrid/>
+        // </DefaultLayout>
     );
 };
 

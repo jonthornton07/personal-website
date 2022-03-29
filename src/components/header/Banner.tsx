@@ -6,8 +6,8 @@ const StyledBanner = styled.div`
     flex-direction: column;
     background-color: black;
     padding: 1em;
-    height: 500px;
     width: 100%;
+    opacity: .87;
 `
 
 interface Props {
