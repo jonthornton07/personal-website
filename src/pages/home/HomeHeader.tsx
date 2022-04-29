@@ -1,30 +1,10 @@
-import React from 'react'
-// import {Container, Header, Image} from 'semantic-ui-react'
-import { useIsMobileDevice } from '../../layouts/LayoutUtils'
-
 const HomeHeader = () => {
     return (
-        <></>
-        // <Container text>
-        //     <Header
-        //         inverted
-        //         as='h2'
-        //         textAlign='center'
-        //         style={{
-        //             fontSize: useIsMobileDevice() ? '2em' : '4em',
-        //             fontWeight: 'normal',
-        //             marginBottom: 0,
-        //             marginTop: useIsMobileDevice() ? '.5em' : '1em',
-        //         }}>
-        //         <Container>
-        //             <Image circular centered size='small' src={require('../../assets/profilePicture.png')}/>
-        //         </Container>
-        //         Jon Thornton
-        //         <Header.Subheader>
-        //             Software Engineer | Leader | Father
-        //         </Header.Subheader>
-        //     </Header>
-        // </Container>
+        <div className='bg-gradient-to-r from-neutral-800 to-neutral-900 pb-5 flex flex-col'>
+            <img className="h-40 rounded-full place-self-center" src={require(`../../assets/media/images/profilePicture.png`)}></img>
+            <div className='text-4xl text-white place-self-center'>Jon Thornton</div>
+            <div className='text-base text-white place-self-center font-light'>Software Engineer | Leader | Father</div>
+        </div>
     )
 }
 

@@ -6,10 +6,13 @@ import DefaultLayoutFull from "./DefaultLayoutFull";
 const DefaultLayout: React.FC<DefaultLayoutParams> = ({
    activePage,
    headerType = HeaderTypes.Regular,
-   headerChildren,
-   children = undefined,
+   children,
 }) => {
-    return <DefaultLayoutFull activePage={activePage} headerType={headerType} headerChildren={headerChildren} children={children} />;
+    return (
+        <DefaultLayoutFull activePage={activePage} headerType={headerType}>
+            {children}
+        </DefaultLayoutFull> 
+    )
 };
 
 export default DefaultLayout;

@@ -1,28 +1,14 @@
-import React from "react";
-// import {CardGroup, Segment} from "semantic-ui-react";
-import { useIsMobileDevice } from "../../layouts/LayoutUtils";
-import ProjectCard from "./ProjectCard";
+import ProjectCard from "../../components/base/ProjectCard";
 import {projectData} from "./ProjectData";
 
 const Projects = () => {
     return (
-        <></>
-        // <Segment>
-        //     <CardGroup centered itemsPerRow={useIsMobileDevice() ? 1 : 2} style={{margin: ".5em"}}>
-        //         {projectData.map((card, index) => {
-        //             return (
-        //                 <ProjectCard
-        //                     key={index}
-        //                     header={card.header}
-        //                     meta={card.meta}
-        //                     description={card.description}
-        //                     logo={card.logo}
-        //                 />
-        //             );
-        //         })}
-        //     </CardGroup>
-        // </Segment>
-    );
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 mx-3">
+            {projectData.map((data, index) => 
+                <ProjectCard key={index} header={data.header} meta={data.meta} description={data.description} logo={data.logo} />
+            )}
+        </div>
+    )
 };
 
 export default Projects;

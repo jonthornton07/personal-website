@@ -5,8 +5,7 @@ import { Pages } from "../pages/pages"
 export interface DefaultLayoutParams {
     activePage: Pages
     headerType: HeaderTypes
-    headerChildren?: JSX.Element
-    children?: JSX.Element
+    children: JSX.Element
 }
 
 export const getWidth = () => {

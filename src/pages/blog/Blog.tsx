@@ -9,7 +9,6 @@ const Blog = () => {
         <DefaultLayout
             activePage={Pages.Blogs}
             headerType={HeaderTypes.Banner}
-            headerChildren={<></>}
         >
             <>
             </>

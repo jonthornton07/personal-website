@@ -12,14 +12,17 @@ const getWidth = () => {
 const DefaultLayout: React.FC<DefaultLayoutParams> = ({
    activePage,
    headerType = "Regular",
-   headerChildren = undefined,
-   children = undefined,
+   children
 }) => {
     const useBannerHeader = headerType === HeaderTypes.Banner;
     const useRegularHeader = headerType === HeaderTypes.Regular;
 
     return (
-        <AppHeader activePage={activePage}></AppHeader>
+        <>
+            <AppHeader activePage={activePage}>
+            </AppHeader>
+            {children}
+        </>
         // <Component>
         //     {useBannerHeader && (
         //         <BannerHeader activePage={activePage} children={headerChildren}/>

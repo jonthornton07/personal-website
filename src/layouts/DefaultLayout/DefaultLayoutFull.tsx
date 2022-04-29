@@ -8,16 +8,19 @@ import { HeaderTypes } from "../../components/header/HeaderTypes";
 const DefaultLayoutFull: React.FC<DefaultLayoutParams> = ({
    activePage,
    headerType,
-   headerChildren,
    children,
 }) => {
     const useBannerHeader = headerType === HeaderTypes.Banner;
     const useRegularHeader = headerType === HeaderTypes.Regular;
 
     return (
-        <AppHeader activePage={activePage}>
+        <>
+            <AppHeader activePage={activePage}>
 
-        </AppHeader>
+            </AppHeader>
+            {children}
+            <h1>WOWOW</h1>
+        </>
         // <>
 
         //     {useBannerHeader && (

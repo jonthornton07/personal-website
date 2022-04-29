@@ -4,10 +4,8 @@ import styled from "styled-components";
 const StyledBanner = styled.div`
     display: flex;
     flex-direction: column;
-    background-color: black;
     padding: 1em;
     width: 100%;
-    opacity: .87;
 `
 
 interface Props {
@@ -16,7 +14,7 @@ interface Props {
 
 const Banner: React.FC<Props> = ({ children = undefined }) => {
     return (
-        <StyledBanner>
+        <StyledBanner className="bg-gradient-to-r from-neutral-800 to-neutral-900">
             { children && children}
         </StyledBanner>
     )

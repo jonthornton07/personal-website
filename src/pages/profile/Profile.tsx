@@ -10,7 +10,6 @@ const Profile = () => {
         <DefaultLayout
             activePage={Pages.Work}
             headerType={HeaderTypes.Banner}
-            headerChildren={<></>}
         >
             <>
             </>

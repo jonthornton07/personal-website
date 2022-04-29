@@ -1,6 +1,3 @@
-import React from "react";
-// import {Header, Segment} from "semantic-ui-react";
-
 const aboutText =
     "Hey there! I am currently a Software Engineer at LifeBell AI. " +
     "Currently, I am working on a variety of things from Mobile to .NET backend applications. " +
@@ -14,11 +11,13 @@ const aboutTextSecondary =
 
 const About = () => {
     return (
-        <></>
-        // <Segment basic style={{margin: ".5em"}}>
-        //     <Header size="medium">About</Header>
-        //     <p>{aboutText} {aboutTextSecondary}</p>
-        // </Segment>
+        <div className="mx-4 mt-4">
+            <p className="text-2xl leading-7 text-gray-900 font-sans antialiased font-medium">About</p>
+            <br></br>
+            <p className="text-base leading-7 text-gray-900 font-sans antialiased">{aboutText}</p>
+            <br></br>
+            <p className="text-base leading-7 text-gray-900 font-sans antialiased">{aboutTextSecondary}</p>
+        </div>
     );
 };
 
