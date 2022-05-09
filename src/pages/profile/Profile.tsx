@@ -11,29 +11,16 @@ const Profile = () => {
             activePage={Pages.Work}
             headerType={HeaderTypes.Banner}
         >
-            <>
-            </>
-            {/* <About/> */}
-            {/* <Divider horizontal>Projects</Divider>
-            <Projects/> */}
+            <div className="flex flex-col place-content-center max-w-m min-w-m">
+                {resumeData.map((data, index) => {
+                    return (
+                        <div className="place-self-center w-screen m:screen flex flex-col">
+                            <ProfileSection key={index} data={data} />
+                        </div>
+                    )}
+                )}
+            </div>
         </DefaultLayout>
-        // <DefaultLayout activePage="Resume" headerType={HeaderTypes.Regular}>
-        //     <Container text>
-        //         {resumeData.map((section, index) => {
-        //             return (
-        //                 <ProfileSection
-        //                     key={index}
-        //                     timeframe={section.timeframe}
-        //                     companyName={section.companyName}
-        //                     title={section.title}
-        //                     logo={section.logo}
-        //                     highlights={section.highlights}
-        //                     location={section.location}
-        //                 />
-        //             );
-        //         })}
-        //     </Container>
-        // </DefaultLayout>
     );
 };
 

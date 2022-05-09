@@ -1,37 +1,31 @@
 import React from "react";
-// import {Divider, Header, Image, List, Segment} from "semantic-ui-react";
 import WorkModel from "./WorkModel";
 
-const ProfileSection: React.FC<WorkModel> = ({
-    timeframe,
-    companyName,
-    title,
-    highlights,
-    logo
+interface Props {
+    data: WorkModel
+}
+
+const ProfileSection: React.FC<Props> = ({
+    data
 }) => {
-    const logoImage = require("../../assets/" + logo);
+    const logoImage = require("../../assets/media/images/" + data.logo);
 
     return (
-        <></>
-        // <Segment basic compact>
-        //     <Header size="medium">
-        //         <Image floated="left" size="large" src={logoImage}/>
-        //         {title}
-        //         <Header.Subheader size="small">
-        //             {companyName} / {timeframe}
-        //         </Header.Subheader>
-        //     </Header>
-        //     <Divider clearing></Divider>
-        //         <List as="ul">
-        //             {highlights.map((highlight, index) => {
-        //                 return (
-        //                     <List.Item key={index} as="li">
-        //                         {highlight}
-        //                     </List.Item>
-        //                 );
-        //             })}
-        //         </List>
-        // </Segment>
+        <div>
+            <div className="flex flex-col p-2 my-2">
+                <div className="flex">
+                    <img className="w-10 h-10 top-2 left-2 rounded place-self-center mx-2" src={logoImage}></img>
+                    <div className="flex flex-col">
+                        <div className="text-lg leading-7 text-gray-900 font-sans antialiased font-semibold">{data.title}</div>
+                        <div className="text-sm leading-7 text-gray-700 font-sans antialiased -mt-1">{data.companyName} / {data.timeframe}</div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="mx-3 border-t">
+                {data.highlights.map((value, index) => <li>{value}</li>)}
+            </div>
+        </div>
     );
 };
 

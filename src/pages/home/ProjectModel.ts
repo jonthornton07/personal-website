@@ -3,4 +3,5 @@ export default interface ProjectModel {
     meta: string
     description: string
     logo: string
+    logoAlt: string
 }

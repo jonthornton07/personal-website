@@ -3,7 +3,6 @@ import DefaultLayout from "../../layouts/DefaultLayout";
 import HomeHeader from "./HomeHeader";
 import About from "./About";
 import { HeaderTypes } from "../../components/header/HeaderTypes";
-import AppHeader from "../../components/header/AppHeader";
 import { Pages } from "../pages";
 import Projects from "./Projects";
 import Divider from "../../components/base/Divider";
