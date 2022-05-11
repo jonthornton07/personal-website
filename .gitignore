@@ -33,3 +33,16 @@ packages/react-devtools-extensions/firefox/*.pem
 packages/react-devtools-extensions/shared/build
 packages/react-devtools-inline/dist
 packages/react-devtools-shell/dist
+
+node_modules
+
+/build
+/public/build
+.env
+
+/cypress/screenshots
+/cypress/videos
+/prisma/data.db
+/prisma/data.db-journal
+
+/app/styles/tailwind.css
