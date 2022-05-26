@@ -3,12 +3,12 @@ import DefaultLayout from "../../layouts/DefaultLayout";
 import {resumeData} from "./ResumeData";
 import ProfileSection from "./ProfileSection";
 import { HeaderTypes } from "../../components/header/HeaderTypes";
-import { Pages } from "../pages";
+import { Routes } from "../../../../app/routes/routes";
 
 const Profile = () => {
     return (
         <DefaultLayout
-            activePage={Pages.Work}
+            activePage={Routes.Work}
             headerType={HeaderTypes.Banner}
         >
             <div className="flex flex-col place-content-center max-w-m min-w-m">

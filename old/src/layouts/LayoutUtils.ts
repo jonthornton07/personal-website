@@ -1,9 +1,9 @@
 import { HeaderTypes } from "../components/header/HeaderTypes"
 import { useMediaQuery } from "react-responsive"
-import { Pages } from "../pages/pages"
+import { Routes } from "../../../app/routes/routes"
 
 export interface DefaultLayoutParams {
-    activePage: Pages
+    activePage: Routes
     headerType: HeaderTypes
     children: JSX.Element
 }

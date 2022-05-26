@@ -11,7 +11,7 @@ const aboutTextSecondary =
 
 const About = () => {
     return (
-        <div className="mx-4 mt-4">
+        <div className="mx-7 mt-7">
             <p className="text-2xl leading-7 text-gray-900 font-sans antialiased font-medium">About</p>
             <br></br>
             <p className="text-base leading-7 text-gray-900 font-sans antialiased">{aboutText}</p>

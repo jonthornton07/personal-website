@@ -14,7 +14,7 @@ export function links() {
 export default function Index() {
   return (
       <div className="w-full">
-          <AppHeader activePage={AppRoutes.Home}/>
+          <AppHeader activePage={AppRoutes.Blogs}/>
         <main>
             <Outlet />
         </main>

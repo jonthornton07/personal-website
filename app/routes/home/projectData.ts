@@ -1,4 +1,4 @@
-import ProjectModel from "./ProjectModel";
+import { ProjectModel } from "../../components/base/projectCard/ProjectCard";
 
 const alohaUI: ProjectModel = {
     header: "Point of Sale",

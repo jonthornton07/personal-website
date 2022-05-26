@@ -8,7 +8,7 @@ interface Props {
 const ProfileSection: React.FC<Props> = ({
     data
 }) => {
-    const logoImage = require("../../assets/media/images/" + data.logo);
+    const logoImage = "/images/" + data.logo;
 
     return (
         <div>
