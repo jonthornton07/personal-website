@@ -1,5 +1,5 @@
 import {initializeApp} from "firebase/app";
-import {getAnalytics} from "firebase/analytics";
+import {getAnalytics, isSupported } from "firebase/analytics";
 
 var firebaseConfig = {
     apiKey: "AIzaSyDkQpA3foSZLSf6OiYn_DXeex11rbmmEGE",
@@ -12,7 +12,12 @@ var firebaseConfig = {
     measurementId: "G-GSNG7MLZDJ"
 }
 
-export const startFirebase = () => {
-    const app = initializeApp(firebaseConfig)
-    getAnalytics(app)
+export const startFirebase = async () => {
+    const result = await isSupported()
+    if (result) {
+        const app = initializeApp(firebaseConfig)
+        getAnalytics(app)
+    } else {
+        console.log(result)
+    }
 }
