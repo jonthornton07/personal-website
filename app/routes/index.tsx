@@ -1,7 +1,10 @@
 import AppHeader, {links as headerLinks} from "../components/header/AppHeader";
-import { Routes  as AppRoutes } from "./routes";
-import { Outlet } from "@remix-run/react";
+import { home } from "./pages";
 import styles from "./styles.css"
+import HomeHeader from "../components/home/homeHeader";
+import About from "../components/home/about";
+import Projects from "../components/home/projects";
+import Divider from "~/components/base/divider/Divider";
 
 export function links() {
     return [
@@ -14,9 +17,12 @@ export function links() {
 export default function Index() {
   return (
       <div className="w-full">
-          <AppHeader activePage={AppRoutes.Home}/>
+          <AppHeader activePage={home}/>
         <main>
-            <Outlet />
+            <HomeHeader/>
+            <About/>
+            <Divider text="PROJECTS"/>
+            <Projects/>
         </main>
       </div>
   );

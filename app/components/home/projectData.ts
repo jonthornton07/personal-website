@@ -1,6 +1,6 @@
-import { ProjectModel } from "../../components/base/projectCard/ProjectCard";
+import type { ProjectViewModel } from "../base/projectCard/ProjectCard"
 
-const alohaUI: ProjectModel = {
+const alohaUI: ProjectViewModel = {
     header: "Point of Sale",
     meta: "Architect: React Native",
     description:
@@ -9,7 +9,7 @@ const alohaUI: ProjectModel = {
     logoAlt: "NCR logo"
 };
 
-const engageMobile: ProjectModel = {
+const engageMobile: ProjectViewModel = {
     header: "Mobile Ordering Mobile App",
     meta: "Lead Developer: Native Android & iOS",
     description: "White-label (30+) online ordering application.",
@@ -17,7 +17,7 @@ const engageMobile: ProjectModel = {
     logoAlt: "NCR logo"
 };
 
-const newspapers: ProjectModel = {
+const newspapers: ProjectViewModel = {
     header: "Newspaper Mobile App",
     meta: "Developer: Native Android & iOS",
     description: "White-label mobile application to deliver news articles",
@@ -25,7 +25,7 @@ const newspapers: ProjectModel = {
     logoAlt: "Cox Media Group logo"
 };
 
-const financial: ProjectModel = {
+const financial: ProjectViewModel = {
     header: "Financial Institution",
     meta: "Lead Developer: Native Android & iOS",
     description: "Mobile banking application for a fortune 500 company.",

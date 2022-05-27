@@ -1,4 +1,4 @@
-import BlogItem from "./BlogItem";
+import type BlogItem from "./BlogItem";
 
 const personalWebsite: BlogItem = {
     title: "Personal Website",

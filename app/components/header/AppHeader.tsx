@@ -1,11 +1,12 @@
 import React from "react"
-import { activePages, Routes } from "~/routes/routes"
+import type { Page } from "~/routes/pages";
+import { activePages } from "~/routes/pages"
 import Tab, {links as tabLinks } from "../base/tab/Tab"
 import Banner from "./Banner"
 import styles from "./styles.css"
 
 interface Props {
-    activePage: Routes
+    activePage: Page
     isFixed?: boolean
 }
 
@@ -19,12 +20,13 @@ const AppHeader: React.FC<Props> = ({activePage, isFixed = false}) => {
         <Banner>
             <div className="tabWrapper">
                 {activePages.map(page => {
+                    console.log(page)
                     return(
                         <Tab 
-                            key={page} 
+                            key={page.name} 
                             active={activePage === page} 
-                            link={page.toLowerCase()}
-                            text={page.toUpperCase()} />
+                            link={page.route.toLowerCase()}
+                            text={page.name.toUpperCase()} />
                     )
                 })}
             </div>

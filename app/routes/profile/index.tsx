@@ -1,5 +1,5 @@
 import { data as resumeData } from "./ResumeData";
-import ProfileSection from "./ProfileSection";
+import ProfileSection from "./profileSection";
 
 const WorkPage = () => {
     return (

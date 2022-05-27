@@ -1,5 +1,5 @@
 import AppHeader, {links as headerLinks} from "../components/header/AppHeader";
-import { Routes  as AppRoutes } from "./routes";
+import { blogs } from "./pages";
 import { Outlet } from "@remix-run/react";
 import styles from "./styles.css"
 
@@ -14,7 +14,7 @@ export function links() {
 export default function Index() {
   return (
       <div className="w-full">
-          <AppHeader activePage={AppRoutes.Blogs}/>
+          <AppHeader activePage={blogs}/>
         <main>
             <Outlet />
         </main>
