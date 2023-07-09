@@ -7,11 +7,13 @@ interface Props {
 }
 
 const Tab: React.FC<Props> = ({active, text, link}) => {
-    const classNameSuffix = active ? "selected" : ""
+    const classNameSuffix = active ? " selected" : ""
+    const className = "tab" + classNameSuffix
 
     return (
-        <a className={"tab " + classNameSuffix}
-            href={`${link}`.toLocaleLowerCase()}>{`${text}`.toUpperCase()}</a>
+        <div className={className}>
+            <a href={`${link}`.toLocaleLowerCase()}>{`${text}`.toUpperCase()}</a>
+        </div>
     )
 }
 

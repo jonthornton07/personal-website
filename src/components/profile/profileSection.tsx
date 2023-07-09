@@ -22,7 +22,7 @@ const ProfileSection: React.FC<Props> = ({
                 </div>
             </div>
                 
-            <div className="mx-5 border-t pt-3">
+            <div className="mx-5 border-t pt-3 text-gray-900">
                 {data.highlights.map((value, index) => <li key={index}>{value}</li>)}
             </div>
         </div>

@@ -6,7 +6,7 @@ interface Props {
 
 const Banner: React.FC<Props> = ({ children = undefined }) => {
     return (
-        <div className="banner bg-gradient-to-r from-neutral-800 to-neutral-900">
+        <div className="p-1 bg-gradient-to-r from-neutral-800 to-neutral-900">
             { children && children}
         </div>
     )

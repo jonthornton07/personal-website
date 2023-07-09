@@ -84,7 +84,7 @@ const ncrManager: WorkModel = {
 }
 
 const lifebellAi: WorkModel = {
-    timeframe: "February 2021 - Current",
+    timeframe: "February 2021 - March 2022",
     companyName: "LifeBell AI",
     location: "Atlanta, GA (Remote)",
     title: "Software Engineer",
@@ -96,4 +96,14 @@ const lifebellAi: WorkModel = {
     ],
 }
 
-export const data = [lifebellAi, ncrManager, ncrSoftwareEngineer, coke, ncrPartOne, coxMediaGroup]
+const tovala: WorkModel = {
+    timeframe: "April 2022 - Current",
+    companyName: "Tovala",
+    location: "Chicago, IL (Remote)",
+    title: "Software Engineering Manager",
+    logo: "tovala.png",
+    logoAlt: "Image showing Tovala logo", 
+    highlights: []
+}
+
+export const data = [tovala, lifebellAi, ncrManager, ncrSoftwareEngineer, coke, ncrPartOne, coxMediaGroup]
