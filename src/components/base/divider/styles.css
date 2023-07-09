@@ -1,0 +1,10 @@
+.divider-text {
+    color:"rgba(0,0,0,0.87)";
+    font-weight: 700;
+}
+
+.divider-line {
+    color:"rgba(0,0,0,0.87)";
+    margin-left: .9em;
+    margin-right: .9em;
+}
