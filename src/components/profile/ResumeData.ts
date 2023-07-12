@@ -8,6 +8,11 @@ const norc: WorkModel = {
     logo: "norc.jpg",
     logoAlt: "Image showing the NORC Logo",
     highlights: [
+        "Led a small team of programmers.",
+        "Worked with external departments to define and document business requirements.",
+        "Designed and implemented components for a web based CMS.",
+        "Designed and implemented major componentsfor an Android CMS.",
+        "Proposed a solution that automated a repetitive task that will greatly reduce costs.",
     ],
 }
 
@@ -19,6 +24,13 @@ const solstice: WorkModel = {
     logo: "solstice.jpg",
     logoAlt: "Image showing the Cox Media Group Logo",
     highlights: [
+        "Converted a hybrid mobile application into white labeled Android and iOS applications.",
+        "Responsible for maintaining and implementing new features for both Android and iOS.",
+        "Worked directly with Product Owners to come to solutions that met needs of the business.",
+        "Setup and maintained continuous integration for the applications.",
+        "Prepared and uploaded App Store builds for both Android and iOS.",
+        "Worked with Quality Assurance to improve processes to increase the efficiency of the team.",
+        "Participated and led agile ceremonies."
     ],
 }
 
@@ -113,8 +125,13 @@ const lifebellAi: WorkModel = {
     logo: "lifebell.jpg",
     logoAlt: "Image showing the LifeBell AI Logo",
     highlights: [
-        "Creating Android POCS for mobile and hardware integration.",
-        "Developed C# APIs for understanding the health of multiple application."
+        "Created Android POC application integrating with multiple BLE sensors.",
+        "Developed C# APIs for understanding the health of multiple application.",
+        "Designed database schema sensor data on both Android and Cloud environments.",
+        "Worked on a patient monitoring dashboard written in Angular.",
+        "Migrated existing React application to Angular.",
+        "Built an authorization and authentication server utilzing IdentityServer4 and C#.",
+        "Built a health monitoring framework to be used with AWS ECS for autoscaling."
     ],
 }
 
