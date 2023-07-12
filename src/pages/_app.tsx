@@ -6,7 +6,7 @@ config.autoAddCss = false
  
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <div className='bg-white'>
+    <div className='bg-white mb-10'>
       <Component {...pageProps} />
     </div>
   )

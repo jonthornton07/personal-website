@@ -7,9 +7,9 @@ interface Props {
 const Divider: React.FC<Props> = ({text}) => {
     return (
         <div className="relative flex py-5 items-center">
-            <span className="divider-line flex-grow border-t"></span>
-            <span className="divider-text flex-shrink mx-4 antialiased">PROJECTS</span>
-            <span className="divider-line flex-grow border-t"></span>
+            <span className="border-gray-300 flex-grow border-t"></span>
+            <span className="font-bold text-slate-700 mx-4 flex-shrink">PROJECTS</span>
+            <span className="border-gray-300 flex-grow border-t"></span>
         </div>  
     )
 }

@@ -16,7 +16,7 @@ const AppHeader: React.FC<Props> = ({activePage}) => {
     return (
         <Banner>
             <div className="grid grid-cols-2 gap-4">
-                <div className="flex bg-purple-400 place-content-center">
+                <div className="flex place-content-center">
                     {activePages.map(page => {
                         return(
                             <Tab 
@@ -27,10 +27,10 @@ const AppHeader: React.FC<Props> = ({activePage}) => {
                         )
                     })}
                 </div>
-                <div className="flex flex-row-reverse bg-red-500 justify-items-end place-content-center">
-                    <FontAwesomeIcon icon={faLinkedinIn} size="xl" />
-                    <FontAwesomeIcon icon={faGithub} size="xl"  />
-                    <FontAwesomeIcon icon={faTwitter} size="xl"  />
+                <div className="flex flex-row-reverse place-content-center">
+                    <FontAwesomeIcon icon={faTwitter} size="xl" className="self-center ml-5"/>
+                    <FontAwesomeIcon icon={faGithub} size="xl" className="self-center ml-5"/>
+                    <FontAwesomeIcon icon={faLinkedinIn} size="xl" className="self-center ml-5"/>
                 </div>
             </div>
         </Banner>
