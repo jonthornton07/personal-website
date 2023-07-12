@@ -9,8 +9,8 @@ export const home: Page = {
 }
 
 export const profile: Page = {
-    route: "/profile",
-    name : "PROFILE"
+    route: "/resume",
+    name : "Resume"
 }
 
 export const blogs: Page = {

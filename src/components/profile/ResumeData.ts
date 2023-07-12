@@ -1,5 +1,27 @@
 import type { WorkModel } from "./WorkModel";
 
+const norc: WorkModel = {
+    timeframe: "May 2011 - October 2012",
+    companyName: "NORC",
+    location: "Chicago, IL",
+    title: "Programmer 1",
+    logo: "norc.jpg",
+    logoAlt: "Image showing the NORC Logo",
+    highlights: [
+    ],
+}
+
+const solstice: WorkModel = {
+    timeframe: "October 20121 - August 2015",
+    companyName: "Solstice Kin + Carta",
+    location: "Chicago, IL",
+    title: "Senior Technical Consultant",
+    logo: "solstice.jpg",
+    logoAlt: "Image showing the Cox Media Group Logo",
+    highlights: [
+    ],
+}
+
 const coxMediaGroup: WorkModel = {
     timeframe: "August 2015 – May 2017",
     companyName: "Cox Media Group",
@@ -106,4 +128,4 @@ const tovala: WorkModel = {
     highlights: []
 }
 
-export const data = [tovala, lifebellAi, ncrManager, ncrSoftwareEngineer, coke, ncrPartOne, coxMediaGroup]
+export const data = [tovala, lifebellAi, ncrManager, ncrSoftwareEngineer, coke, ncrPartOne, coxMediaGroup, solstice, norc]

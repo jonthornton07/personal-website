@@ -11,7 +11,7 @@ const ProfileSection: React.FC<Props> = ({
     const logoImage = "/images/" + data.logo;
 
     return (
-        <div>
+        <div className="flex-grow">
             <div className="p-2 mt-2">
                 <div className="flex">
                     <img className="w-10 h-10 top-2 left-2 rounded mx-2 my-2" src={logoImage} alt={data.logoAlt}></img>
@@ -22,7 +22,7 @@ const ProfileSection: React.FC<Props> = ({
                 </div>
             </div>
                 
-            <div className="mx-5 border-t pt-3 text-gray-900">
+            <div className="mx-5 pl-5 border-t pt-3 text-gray-900">
                 {data.highlights.map((value, index) => <li key={index}>{value}</li>)}
             </div>
         </div>
