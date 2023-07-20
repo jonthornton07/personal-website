@@ -5,16 +5,13 @@ interface Props {
     data: WorkModel
 }
 
-//TODO: Make items collapseable
-//TODO: Change the outline to be card esk
-//TODO: Maybe make the screen more interactive?
 const ProfileSection: React.FC<Props> = ({
     data
 }) => {
     const logoImage = "/images/" + data.logo;
 
     return (
-        <div className="flex-grow mb-10">
+        <div className="flex-grow">
             <div className="p-2 mt-2">
                 <div className="flex">
                     <img className="w-10 h-10 top-2 left-2 rounded mx-2 my-2" src={logoImage} alt={data.logoAlt}></img>

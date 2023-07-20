@@ -11,7 +11,7 @@ const norc: WorkModel = {
         "Led a small team of programmers.",
         "Worked with external departments to define and document business requirements.",
         "Designed and implemented components for a web based CMS.",
-        "Designed and implemented major componentsfor an Android CMS.",
+        "Designed and implemented major components for an Android CMS.",
         "Proposed a solution that automated a repetitive task that will greatly reduce costs.",
     ],
 }
@@ -142,7 +142,14 @@ const tovala: WorkModel = {
     title: "Software Engineering Manager",
     logo: "tovala.png",
     logoAlt: "Image showing Tovala logo", 
-    highlights: []
+    highlights: [
+        "Managed an Android, iOS and web team that focused on subscriber facing features.",
+        "Proposed a solution and implemented Tovala Marketplace, a profitable startup inside of a startup.",
+        "Collaborated with cross functional leaders to build cross functional processes.",
+        "Lead and participate in technical discussions to drive consensus and direction.",
+        "Managed strategy and expectations for the teams.",
+        "Hired team members and managed job descriptions."
+    ]
 }
 
 export const data = [tovala, lifebellAi, ncrManager, ncrSoftwareEngineer, coke, ncrPartOne, coxMediaGroup, solstice, norc]

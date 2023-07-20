@@ -1,5 +1,21 @@
 import type { ProjectViewModel } from "../base/projectCard/ProjectCard"
 
+const tovalaApp: ProjectViewModel = {
+    header: "Tovala Subscriber Facing Apps",
+    meta: "Software Engineering Manager",
+    description: "Managed the subscriber facing Tovala Web/Android/iOS products to order and cook food.",
+    logo: "tovala.png",
+    logoAlt: "Tovala Logo"
+}
+
+const lifebell: ProjectViewModel = {
+    header: "Remote Patient Monitoring",
+    meta: "Software Engineer",
+    description: "Built a real time patient monitoring system by using an Android device connected via BLE enabled sensors to remotely monitor patients biometrics.",
+    logo: "lifebell.jpg",
+    logoAlt: "Lifbell AI Logo"
+}
+
 const alohaUI: ProjectViewModel = {
     header: "Point of Sale",
     meta: "Architect: React Native",
@@ -33,4 +49,4 @@ const financial: ProjectViewModel = {
     logoAlt: "Solstice Kin + Karta Logo"
 }
 
-export const projectData = [alohaUI, engageMobile, newspapers, financial];
+export const projectData = [tovalaApp, lifebell, alohaUI, engageMobile, newspapers, financial];
