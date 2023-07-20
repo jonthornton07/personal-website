@@ -18,4 +18,10 @@ export const blogs: Page = {
     name : "BLOGS"
 }
 
-export const activePages = [home, profile, blogs]
+let hiddenActivePages = [home, profile]
+
+if (process.env.NODE_ENV == 'development') {
+    hiddenActivePages = [...hiddenActivePages, blogs]
+}
+
+export const activePages = hiddenActivePages

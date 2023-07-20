@@ -28,9 +28,15 @@ const AppHeader: React.FC<Props> = ({activePage}) => {
                     })}
                 </div>
                 <div className="flex flex-row-reverse place-content-center">
-                    <FontAwesomeIcon icon={faTwitter} size="xl" className="self-center ml-5" color="white"/>
-                    <FontAwesomeIcon icon={faGithub} size="xl" className="self-center ml-5" color="white"/>
-                    <FontAwesomeIcon icon={faLinkedinIn} size="xl" className="self-center ml-5" color="white"/>
+                    <FontAwesomeIcon icon={faTwitter} size="xl" className="self-center ml-5" color="white" onClick={
+                        () => window.open("https://twitter.com/jthornton07", "_blank", "noreferrer")
+                    }/>
+                    <FontAwesomeIcon icon={faGithub} size="xl" className="self-center ml-5" color="white" onClick={
+                        () => window.open("https://github.com/jonthornton07", "_blank", "noreferrer")
+                    }/>
+                    <FontAwesomeIcon icon={faLinkedinIn} size="xl" className="self-center ml-5" color="white" onClick={
+                        () => window.open("https://www.linkedin.com/in/jthornton07/", "_blank", "noreferrer")
+                    }/>
                 </div>
             </div>
         </Banner>
