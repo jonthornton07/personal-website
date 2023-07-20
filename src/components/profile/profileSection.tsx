@@ -5,6 +5,9 @@ interface Props {
     data: WorkModel
 }
 
+//TODO: Make items collapseable
+//TODO: Change the outline to be card esk
+//TODO: Maybe make the screen more interactive?
 const ProfileSection: React.FC<Props> = ({
     data
 }) => {

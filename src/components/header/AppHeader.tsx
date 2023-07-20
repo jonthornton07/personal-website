@@ -28,9 +28,9 @@ const AppHeader: React.FC<Props> = ({activePage}) => {
                     })}
                 </div>
                 <div className="flex flex-row-reverse place-content-center">
-                    <FontAwesomeIcon icon={faTwitter} size="xl" className="self-center ml-5"/>
-                    <FontAwesomeIcon icon={faGithub} size="xl" className="self-center ml-5"/>
-                    <FontAwesomeIcon icon={faLinkedinIn} size="xl" className="self-center ml-5"/>
+                    <FontAwesomeIcon icon={faTwitter} size="xl" className="self-center ml-5" color="white"/>
+                    <FontAwesomeIcon icon={faGithub} size="xl" className="self-center ml-5" color="white"/>
+                    <FontAwesomeIcon icon={faLinkedinIn} size="xl" className="self-center ml-5" color="white"/>
                 </div>
             </div>
         </Banner>
