@@ -7,14 +7,14 @@ import Divider from "@/components/base/divider/Divider";
 
 export default function Page() {
   return (
-      <div className="w-full">
-          <AppHeader activePage={home}/>
-        <main>
-            <HomeHeader/>
-            <About/>
-            <Divider text="PROJECTS"/>
-            <Projects/>
-        </main>
-      </div>
+    <div className="w-full">
+      <AppHeader activePage={home} />
+      <main>
+        <HomeHeader />
+        <About />
+        <Divider text="PROJECTS" />
+        <Projects />
+      </main>
+    </div>
   );
 }

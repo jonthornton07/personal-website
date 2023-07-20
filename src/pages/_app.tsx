@@ -1,13 +1,13 @@
-import type { AppProps } from 'next/app'
-import '@/globals.css'
-import { config } from '@fortawesome/fontawesome-svg-core'
-import '@fortawesome/fontawesome-svg-core/styles.css'
-config.autoAddCss = false
- 
+import type { AppProps } from "next/app";
+import "@/globals.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+config.autoAddCss = false;
+
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <div className='bg-white mb-10'>
+    <div className="bg-white mb-10">
       <Component {...pageProps} />
     </div>
-  )
+  );
 }

@@ -1,27 +1,27 @@
 export interface Page {
-    route: string,
-    name: string
+  route: string;
+  name: string;
 }
 
 export const home: Page = {
-    route: "/",
-    name : "HOME"
-}
+  route: "/",
+  name: "Home",
+};
 
 export const profile: Page = {
-    route: "/resume",
-    name : "Resume"
-}
+  route: "/resume",
+  name: "Resume",
+};
 
 export const blogs: Page = {
-    route: "/blogs",
-    name : "BLOGS"
+  route: "/blogs",
+  name: "Blogs",
+};
+
+let hiddenActivePages = [home, profile];
+
+if (process.env.NODE_ENV == "development") {
+  hiddenActivePages = [...hiddenActivePages, blogs];
 }
 
-let hiddenActivePages = [home, profile]
-
-if (process.env.NODE_ENV == 'development') {
-    hiddenActivePages = [...hiddenActivePages, blogs]
-}
-
-export const activePages = hiddenActivePages
+export const activePages = hiddenActivePages;
