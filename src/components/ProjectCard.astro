@@ -1,0 +1,22 @@
+---
+import type { ProjectViewModel } from "../data/projects";
+import WorkImage from "./WorkImage.astro";
+
+const project: ProjectViewModel = Astro.props as ProjectViewModel;
+---
+<div class="display flex flex-col border rounded border-gray-200 p-5">
+    <div class="display flex flex-row justify-between">
+        <div class="display flex flex-col">
+            <div class="text-lg leading-7 text-gray-900 font-sans antialiased font-semibold">
+            {project.header}
+            </div>
+            <div class="text-sm leading-7 text-gray-900 font-sans font-thin antialiased -mt-1">
+            {project.meta}
+            </div>
+        </div>
+        <WorkImage imagePath={project.logo} altText={project.logoAlt} />
+    </div>
+    <div class="text-base leading-7 text-gray-700 font-sans">
+    {project.description}
+    </div>
+</div>

@@ -1,0 +1,76 @@
+---
+import HomeLayout from "../layouts/HomeLayout.astro";
+import { Image } from 'astro:assets';
+import profilePicture from '../assets/profilePicture.png';
+import Divider from "../components/Divider.astro";
+import Header from "../components/Header.astro";
+import { projectData } from "../data/projects";
+import ProjectCard from "../components/ProjectCard.astro";
+
+const pageTitle = "Jon Thornton - Software Engineer";
+const aboutText =
+  "Hey there! I am currently a Software Engineering Manager at Tovala. " +
+  "Currently, I am managing a team of mobile and web developers working on Tovala's subscriber facing and internal applications. " +
+  "This ranges from working on ordering to cooking meals to internal tooling such as the ability for our chefs to create world class meals. ";
+("Tovala is a startup focusing on simplifying meal time by making world class meals in 20 mins or less with little to no effort involved. ");
+
+const aboutTextSecondary =
+  "I enjoy doing mobile and front end work, but at the same time, I dabble in learning about backend technologies. " +
+  "This website is significantly over-engineered so that I can play around with different backend technologies and DevOps things. " +
+  "I enjoy learning different languages, different stacks, and different ways of doing the same thing. " +
+  "It's fun just to explore what is out there.";
+---
+<style>
+    h1 {
+        font-size: 3rem;
+        color: white;
+        padding: 0px;
+    }
+    .subheader{
+        font-size: 1.5rem;
+        color: #FFFFFFCC;
+        padding: 0px;
+        margin: 0px;
+    }
+    .profile-img {
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        margin-top: 50px;
+    }
+</style>
+
+<HomeLayout pageTitle={pageTitle}>
+    <div class="p-1 py-3 bg-gradient-to-r from-neutral-800 to-neutral-900 flex flex-col items-center">
+        <div class="w-full">
+            <Header selectedText="Home"/>
+        </div>
+        <Image class="profile-img" src={profilePicture} alt="A headshot of Jon Thornton." />
+        <h1>Jon Thornton</h1>
+        <p class="subheader">Software Engineer | Leader | Father</p>
+    </div> 
+    <div class="mt-7">
+      <p class="text-2xl px-7 text-gray-900 font-sans antialiased font-medium">
+        About
+      </p>
+      <br></br>
+      <p class="text-base px-7 text-gray-900 font-sans antialiased">
+        {aboutText} {aboutTextSecondary}
+      </p>
+    </div>
+    <div class="px-7 pb-5">
+        <Divider />
+            <div class="grid grid-cols-1 gap-5 sm:grid-cols-2">
+                {projectData.map((data, index) => (
+                    <ProjectCard
+                        key={index}
+                        header={data.header}
+                        meta={data.meta}
+                        description={data.description}
+                        logo={data.logo}
+                        logoAlt={data.logoAlt}
+                    />
+                ))}
+            </div>
+    </div>
+</HomeLayout>

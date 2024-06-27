@@ -1,0 +1,12 @@
+---
+import Hamburger from './Hamburger.astro';
+import Navigation from './Navigation.astro';
+
+const { selectedText } = Astro.props;
+---
+<header>
+  <nav class="mx-40">
+    <Hamburger />
+    <Navigation selectedText={selectedText}/>
+  </nav>
+</header>
