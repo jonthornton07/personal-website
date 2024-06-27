@@ -9,7 +9,7 @@ import ProjectCard from "../components/ProjectCard.astro";
 
 const pageTitle = "Jon Thornton - Software Engineer";
 const aboutText =
-  "Hey there! I am currently a Software Engineering Manager at Tovala. " +
+  "I am currently a Software Engineering Manager at Tovala. " +
   "Currently, I am managing a team of mobile and web developers working on Tovala's subscriber facing and internal applications. " +
   "This ranges from working on ordering to cooking meals to internal tooling such as the ability for our chefs to create world class meals. ";
 ("Tovala is a startup focusing on simplifying meal time by making world class meals in 20 mins or less with little to no effort involved. ");
@@ -27,7 +27,7 @@ const aboutTextSecondary =
         padding: 0px;
     }
     .subheader{
-        font-size: 1.5rem;
+        font-size: 1rem;
         color: #FFFFFFCC;
         padding: 0px;
         margin: 0px;
@@ -46,14 +46,10 @@ const aboutTextSecondary =
             <Header selectedText="Home"/>
         </div>
         <Image class="profile-img" src={profilePicture} alt="A headshot of Jon Thornton." />
-        <h1>Jon Thornton</h1>
-        <p class="subheader">Software Engineer | Leader | Father</p>
+        <h1 class="font-light">Jon Thornton</h1>
+        <p class="subheader font-extralight">Software Engineer | Leader | Father</p>
     </div> 
     <div class="mt-7">
-      <p class="text-2xl px-7 text-gray-900 font-sans antialiased font-medium">
-        About
-      </p>
-      <br></br>
       <p class="text-base px-7 text-gray-900 font-sans antialiased">
         {aboutText} {aboutTextSecondary}
       </p>

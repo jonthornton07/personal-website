@@ -6,22 +6,22 @@ import Projects from "../components/Projects.astro";
 const pageTitle = "About Jon Thornton"
 ---
 <BaseLayout pageTitle={pageTitle} selectedText={"About"}>
-    <div class="grid h-screen place-items-center my-2">
-    {resumeData.map((data, _) => {
-        return (
-        <div class="w-screen md:w-2/3 lg:w-1/2 py-2">
-            <div>
-                <Projects 
-                    logo={data.logo}
-                    logoAlt={data.logoAlt}
-                    title={data.title}
-                    companyName={data.companyName}
-                    timeframe={data.timeframe}
-                    highlights={data.highlights}
-                    />
-            </div>
-        </div>
-        );
-    })}
+    <div class="grid h-screen place-items-center my-2 pb-10">
+        {resumeData.map((data, _) => {
+            return (
+                <div class="w-screen md:w-2/3 lg:w-1/2 py-2">
+                    <div>
+                        <Projects 
+                            logo={data.logo}
+                            logoAlt={data.logoAlt}
+                            title={data.title}
+                            companyName={data.companyName}
+                            timeframe={data.timeframe}
+                            highlights={data.highlights}
+                            />
+                    </div>
+                </div>
+            );
+        })}
     </div>
 </BaseLayout>
