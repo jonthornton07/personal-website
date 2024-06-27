@@ -25,7 +25,7 @@ const work: WorkModel = Astro.props as WorkModel;
   </div>
 
   <div class="mx-5 pl-5 border-t pt-3 text-gray-900">
-    {work.highlights.map((value, index) => (
+    {work.highlights.map((value) => (
       <li>{value}</li>
     ))}
   </div>
