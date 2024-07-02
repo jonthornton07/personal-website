@@ -12,7 +12,22 @@ const firebaseConfig: FirebaseOptions = {
   measurementId: "G-GSNG7MLZDJ",
 };
 
-const app = initializeApp(firebaseConfig);
-const analytics: Analytics = getAnalytics(app);
+let app = initializeApp(firebaseConfig);
+let analytics: Analytics = getAnalytics(app);
 
-export { analytics };
+export function getFirebaseApp() {
+  if (!app && typeof window !== "undefined") {
+    app = initializeApp(firebaseConfig);
+  }
+  return app;
+}
+
+export function getFirebaseAnalytics() {
+  if (!analytics && typeof window !== "undefined") {
+    const app = getFirebaseApp();
+    if (app) {
+      analytics = getAnalytics(app);
+    }
+  }
+  return analytics;
+}
