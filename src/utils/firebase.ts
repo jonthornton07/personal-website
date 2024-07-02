@@ -1,5 +1,9 @@
 import { initializeApp, type FirebaseOptions } from "firebase/app";
-import { getAnalytics, type Analytics } from "firebase/analytics";
+import {
+  getAnalytics,
+  initializeAnalytics,
+  type Analytics,
+} from "firebase/analytics";
 
 const firebaseConfig: FirebaseOptions = {
   apiKey: "AIzaSyDkQpA3foSZLSf6OiYn_DXeex11rbmmEGE",
@@ -27,6 +31,11 @@ export function getFirebaseAnalytics() {
     const app = getFirebaseApp();
     if (app) {
       analytics = getAnalytics(app);
+      initializeAnalytics(app, {
+        config: {
+          cookie_flags: "max-age=7200;secure;samesite=none",
+        },
+      });
     }
   }
   return analytics;
