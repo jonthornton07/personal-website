@@ -19,19 +19,18 @@ const firebaseConfig: FirebaseOptions = {
 let app = initializeApp(firebaseConfig);
 let analytics: Analytics = getAnalytics(app);
 
-export function getFirebaseApp() {
+const getFirebaseApp = () => {
   if (!app && typeof window !== "undefined") {
     app = initializeApp(firebaseConfig);
   }
   return app;
-}
+};
 
-export function getFirebaseAnalytics() {
+export const getFirebaseAnalytics = () => {
   if (!analytics && typeof window !== "undefined") {
     const app = getFirebaseApp();
     if (app) {
-      analytics = getAnalytics(app);
-      initializeAnalytics(app, {
+      analytics = initializeAnalytics(app, {
         config: {
           cookie_flags: "max-age=7200;secure;samesite=none",
         },
@@ -39,4 +38,4 @@ export function getFirebaseAnalytics() {
     }
   }
   return analytics;
-}
+};
