@@ -7,7 +7,7 @@ export interface ProjectViewModel {
 }
 
 const tovalaApp: ProjectViewModel = {
-  header: "Tovala Subscriber Facing Apps",
+  header: "Tovala Subscriber-Facing Apps",
   meta: "Software Engineering Manager",
   description:
     "Managed the subscriber-facing Tovala Web/Android/iOS products to order and cook food.",
