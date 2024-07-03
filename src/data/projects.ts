@@ -10,7 +10,7 @@ const tovalaApp: ProjectViewModel = {
   header: "Tovala Subscriber Facing Apps",
   meta: "Software Engineering Manager",
   description:
-    "Managed the subscriber facing Tovala Web/Android/iOS products to order and cook food.",
+    "Managed the subscriber-facing Tovala Web/Android/iOS products to order and cook food.",
   logo: "tovala.png",
   logoAlt: "Tovala Logo",
 };
