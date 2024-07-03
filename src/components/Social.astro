@@ -1,0 +1,17 @@
+---
+import { Icon } from 'astro-icon/components';
+
+type SupportedSocialImages = 'github' | 'twitter' | 'linkedin';
+
+interface Props {
+    icon: SupportedSocialImages
+    link: string
+    alt: string
+}
+
+const { icon, link, alt } = Astro.props
+const formattedIcon = `mdi:${icon}`
+---
+<a href={link} title={alt} target="_blank" rel="noopener noreferrer">
+      <Icon name={formattedIcon} size={25} class="text-white"/>
+</a>

@@ -1,12 +1,22 @@
 ---
 import Hamburger from './Hamburger.astro';
 import Navigation from './Navigation.astro';
+import { Icon } from 'astro-icon/components';
+import Social from './Social.astro';
 
 const { selectedText } = Astro.props;
 ---
 <header>
-  <nav class="mx-10">
-    <Hamburger />
-    <Navigation selectedText={selectedText}/>
-  </nav>
+  <div class="flex flex-row justify-between">
+    <div>
+      <nav class="mx-10">
+        <Hamburger />
+        <Navigation selectedText={selectedText}/>
+      </nav>
+    </div>
+    <div class="flex flex-row items-center gap-2">
+      <Social link='https://github.com/jonthornton07' icon='github' alt='Link to the Github profile of Jon Thornton' />
+      <Social link='https://www.linkedin.com/in/jthornton07' icon='linkedin' alt='Link to the LinkedIn profile of Jon Thornton'/>
+    </div>
+  </div>
 </header>
