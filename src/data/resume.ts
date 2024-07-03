@@ -194,12 +194,12 @@ const tovala: WorkModel = {
   location: "Chicago, IL (Remote)",
   titles: [
     {
-      title: "Software Engineering Manager",
-      timeframe: "April 2022 - Jan 2023",
-    },
-    {
       title: "Director of Software Engineering",
       timeframe: "Jan 2023 - Present",
+    },
+    {
+      title: "Software Engineering Manager",
+      timeframe: "April 2022 - Jan 2023",
     },
   ],
   logo: "tovala.png",
