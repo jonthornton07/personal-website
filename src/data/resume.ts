@@ -1,8 +1,13 @@
+export interface PositionModel {
+  title: string;
+  timeframe: string;
+}
+
 export interface WorkModel {
   timeframe: string;
   companyName: string;
   location: string;
-  title: string;
+  titles: Array<PositionModel>;
   logo: string;
   logoAlt: string;
   highlights: string[];
@@ -12,7 +17,12 @@ const norc: WorkModel = {
   timeframe: "May 2011 - October 2012",
   companyName: "NORC",
   location: "Chicago, IL",
-  title: "Programmer 1",
+  titles: [
+    {
+      title: "Programmer 1",
+      timeframe: "May 2011 - October 2012",
+    },
+  ],
   logo: "norc.jpg",
   logoAlt: "Image showing the NORC Logo",
   highlights: [
@@ -28,7 +38,12 @@ const solstice: WorkModel = {
   timeframe: "October 20121 - August 2015",
   companyName: "Solstice Kin + Carta",
   location: "Chicago, IL",
-  title: "Senior Technical Consultant",
+  titles: [
+    {
+      title: "Senior Technical Consultant",
+      timeframe: "October 20121 - August 2015",
+    },
+  ],
   logo: "solstice.jpg",
   logoAlt: "Image showing the Cox Media Group Logo",
   highlights: [
@@ -46,7 +61,12 @@ const coxMediaGroup: WorkModel = {
   timeframe: "August 2015 – May 2017",
   companyName: "Cox Media Group",
   location: "Atlanta, GA",
-  title: "Senior Mobile Application Developer",
+  titles: [
+    {
+      title: "Senior Mobile Application Developer",
+      timeframe: "August 2015 – May 2017",
+    },
+  ],
   logo: "cmg.png",
   logoAlt: "Image showing the Cox Media Group Logo",
   highlights: [
@@ -63,7 +83,12 @@ const coke: WorkModel = {
   timeframe: "February 2019 - May 2019",
   companyName: "Coca-Cola",
   location: "Atlanta, GA",
-  title: "Solutions Architect III",
+  titles: [
+    {
+      title: "Solutions Architect III",
+      timeframe: "February 2019 - May 2019",
+    },
+  ],
   logo: "coke.png",
   logoAlt: "Image showing the Coca Cola Logo",
   highlights: [
@@ -79,7 +104,12 @@ const ncrPartOne: WorkModel = {
   timeframe: "May 2017 – February 2019",
   companyName: "NCR",
   location: "Atlanta, GA",
-  title: "Software Engineer III",
+  titles: [
+    {
+      title: "Software Engineer III",
+      timeframe: "May 2017 – February 2019",
+    },
+  ],
   logo: "ncr.png",
   logoAlt: "Image showing the NCR Logo",
   highlights: [
@@ -95,7 +125,12 @@ const ncrSoftwareEngineer = {
   timeframe: "May 2019 - December 2020",
   companyName: "NCR",
   location: "Atlanta, GA",
-  title: "Software Engineer III",
+  titles: [
+    {
+      title: "Software Engineer III",
+      timeframe: "May 2019 - December 2020",
+    },
+  ],
   logo: "ncr.png",
   logoAlt: "Image showing the NCR Logo",
   highlights: [
@@ -112,7 +147,12 @@ const ncrManager: WorkModel = {
   timeframe: "December 2020 - January 2021",
   companyName: "NCR",
   location: "Atlanta, GA",
-  title: "Software Engineering Manager",
+  titles: [
+    {
+      title: "Software Engineering Manager",
+      timeframe: "December 2020 - January 2021",
+    },
+  ],
   logo: "ncr.png",
   logoAlt: "Image showing the NCR Logo",
   highlights: [
@@ -129,7 +169,12 @@ const lifebellAi: WorkModel = {
   timeframe: "February 2021 - March 2022",
   companyName: "LifeBell AI",
   location: "Atlanta, GA (Remote)",
-  title: "Software Engineer",
+  titles: [
+    {
+      title: "Software Engineer",
+      timeframe: "February 2021 - March 2022",
+    },
+  ],
   logo: "lifebell.jpg",
   logoAlt: "Image showing the LifeBell AI Logo",
   highlights: [
@@ -147,7 +192,16 @@ const tovala: WorkModel = {
   timeframe: "April 2022 - Current",
   companyName: "Tovala",
   location: "Chicago, IL (Remote)",
-  title: "Software Engineering Manager",
+  titles: [
+    {
+      title: "Software Engineering Manager",
+      timeframe: "April 2022 - Jan 2023",
+    },
+    {
+      title: "Director of Software Engineering",
+      timeframe: "Jan 2023 - Present",
+    },
+  ],
   logo: "tovala.png",
   logoAlt: "Image showing Tovala logo",
   highlights: [
