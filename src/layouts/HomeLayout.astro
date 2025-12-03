@@ -1,4 +1,6 @@
 ---
+import PostHog from '../components/posthog.astro';
+
 const { pageTitle } = Astro.props;
 ---
 <html lang="en">
@@ -8,6 +10,7 @@ const { pageTitle } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
+    <PostHog />
   </head>
   <body class="min-w-[350px]">
     <slot />
