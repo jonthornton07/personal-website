@@ -7,12 +7,14 @@ export interface PostHogConfig {
   defaultsVersion?: string;
 }
 
+const DEFAULT_HOST = "https://us.i.posthog.com";
+
 export const posthogConfig: PostHogConfig = {
-  apiKey: import.meta.env.PUBLIC_POSTHOG_KEY || '',
-  apiHost: import.meta.env.PUBLIC_POSTHOG_HOST || 'https://us.i.posthog.com',
-  defaultsVersion: '2025-05-24',
+  apiKey: import.meta.env.PUBLIC_POSTHOG_KEY || "",
+  apiHost: import.meta.env.PUBLIC_POSTHOG_HOST || DEFAULT_HOST,
+  defaultsVersion: "2025-05-24",
 };
 
 export const isPostHogEnabled = (): boolean => {
-  return !!posthogConfig.apiKey && typeof window !== 'undefined';
+  return !!posthogConfig.apiKey && typeof window !== "undefined";
 };
