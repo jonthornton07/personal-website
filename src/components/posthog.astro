@@ -45,6 +45,9 @@ import { posthogConfig, isPostHogEnabled } from '../utils/posthog';
     if (config.apiKey) {
       posthog.init(config.apiKey, {
         api_host: config.apiHost,
+        session_recording: {
+          recordCrossOriginIframes: true
+        },
         ...(config.defaultsVersion && { defaults: config.defaultsVersion })
       });
     }
