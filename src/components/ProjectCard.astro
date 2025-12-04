@@ -4,7 +4,7 @@ import WorkImage from "./WorkImage.astro";
 
 const project: ProjectViewModel = Astro.props as ProjectViewModel;
 ---
-<div class="display flex flex-col border rounded border-gray-200 p-5">
+<div class="display flex flex-col border rounded border-gray-200 p-5 project-card cursor-pointer hover:shadow-lg transition-shadow" data-project-name={project.header} data-project-meta={project.meta}>
     <div class="display flex flex-row justify-between">
         <div class="display flex flex-col">
             <div class="text-lg leading-7 text-gray-900 font-sans antialiased font-semibold">
@@ -20,3 +20,19 @@ const project: ProjectViewModel = Astro.props as ProjectViewModel;
     {project.description}
     </div>
 </div>
+
+<script>
+  import { trackProjectClick } from '../utils/posthog-tracking';
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const projectCards = document.querySelectorAll('.project-card');
+    projectCards.forEach(card => {
+      card.addEventListener('click', (e) => {
+        const target = e.currentTarget as HTMLElement;
+        const projectName = target.dataset.projectName || 'unknown';
+        const projectMeta = target.dataset.projectMeta || '';
+        trackProjectClick(projectName, projectMeta);
+      });
+    });
+  });
+</script>

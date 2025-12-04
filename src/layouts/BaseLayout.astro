@@ -21,9 +21,37 @@ const { pageTitle, selectedText } = Astro.props;
     <script>
       import { logEvent } from 'firebase/analytics';
       import { getFirebaseAnalytics } from '../utils/firebase';
-      
+      import { trackScrollDepth, initializeUserProperties } from '../utils/posthog-tracking';
+
       const analytics = getFirebaseAnalytics();
-      logEvent(analytics, 'page_view')
+      logEvent(analytics, 'page_view');
+
+      // Initialize PostHog user properties
+      initializeUserProperties();
+
+      // Track scroll depth
+      let maxScrollDepth = 0;
+      const scrollDepthThresholds = [25, 50, 75, 100];
+      const trackedDepths = new Set();
+
+      const trackScroll = () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollPercent = Math.round((scrollTop / docHeight) * 100);
+
+        if (scrollPercent > maxScrollDepth) {
+          maxScrollDepth = scrollPercent;
+        }
+
+        scrollDepthThresholds.forEach(threshold => {
+          if (scrollPercent >= threshold && !trackedDepths.has(threshold)) {
+            trackedDepths.add(threshold);
+            trackScrollDepth(threshold);
+          }
+        });
+      };
+
+      window.addEventListener('scroll', trackScroll, { passive: true });
     </script>
   </body>
 </html>
