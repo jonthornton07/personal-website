@@ -32,6 +32,21 @@ const resumeSelected = selectedText === "About"
 </style>
 
 <div class="tab">
-    <a href="/" class:list={['a', { selected: homeSelected }]}>Home</a>
-    <a href="/resume" class:list={['a', { selected: resumeSelected }]}>About</a>
+    <a href="/" class:list={['a', 'nav-link', { selected: homeSelected }]} data-nav-page="Home">Home</a>
+    <a href="/resume" class:list={['a', 'nav-link', { selected: resumeSelected }]} data-nav-page="About">About</a>
 </div>
+
+<script>
+  import { trackNavigationClick } from '../utils/posthog-tracking';
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        const target = e.currentTarget as HTMLAnchorElement;
+        const page = target.dataset.navPage || target.textContent || 'unknown';
+        trackNavigationClick(page);
+      });
+    });
+  });
+</script>

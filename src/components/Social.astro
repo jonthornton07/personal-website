@@ -12,6 +12,22 @@ interface Props {
 const { icon, link, alt } = Astro.props
 const formattedIcon = `mdi:${icon}`
 ---
-<a href={link} title={alt} target="_blank" rel="noopener noreferrer">
+<a href={link} title={alt} target="_blank" rel="noopener noreferrer" class="social-link" data-social-type={icon} data-social-url={link}>
       <Icon name={formattedIcon} size={25} class="text-white"/>
 </a>
+
+<script>
+  import { trackLinkClick } from '../utils/posthog-tracking';
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const socialLinks = document.querySelectorAll('.social-link');
+    socialLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        const target = e.currentTarget as HTMLAnchorElement;
+        const socialType = target.dataset.socialType || 'unknown';
+        const url = target.dataset.socialUrl || target.href;
+        trackLinkClick('social', socialType, url);
+      });
+    });
+  });
+</script>
